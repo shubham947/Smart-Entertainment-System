@@ -1,0 +1,14 @@
+hr {
+    border-top: 1px solid white;
+    margin: 4px 0;
+}
+
+div fa-icon {
+    font-size: 0.9em;
+    color: rgb(150, 180, 180);
+}
+
+div fa-icon:hover {
+    font-size: 1em;
+    color: white;
+}

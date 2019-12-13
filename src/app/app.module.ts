@@ -17,6 +17,7 @@ import { VideoComponent } from './video/video.component';
 import { MapComponent } from './map/map.component';
 import { InfoComponent } from './info/info.component';
 import { SettingsComponent } from './settings/settings.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SettingsComponent } from './settings/settings.component';
     VideoComponent,
     MapComponent,
     InfoComponent,
-    SettingsComponent
+    SettingsComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

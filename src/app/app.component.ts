@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { faSearch, faUserCircle, faCog, faBell, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faHome, faMapMarkedAlt, faInfo, faFilm } from "@fortawesome/free-solid-svg-icons";
 import { faItunesNote } from "@fortawesome/free-brands-svg-icons";
-import { validateVerticalPosition } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -31,5 +30,26 @@ export class AppComponent {
   userDialogOpen:boolean = false;
   notificationDialogOpen:boolean = false;
   user:any = null;
+
+  searchResults:string[] = [];
+  searchDialogOpen:boolean = false;
+
+  onKey(event: any) {
+    this.searchResults.splice(0);
+
+    if(event.target.value.length>0)
+      this.searchResults.push(event.target.value);
+      
+    if(this.searchResults.length > 0){
+      this.searchDialogOpen = true;
+    } else {
+      this.searchDialogOpen = false;
+    }
+  }
+
+  playerOpen:boolean = true;
+  closePlayer($event:boolean){
+    this.playerOpen = $event;
+  }
 
 }
