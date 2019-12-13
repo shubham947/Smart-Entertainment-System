@@ -4,6 +4,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { MatSidenavModule } from "@angular/material";
 import { OverlayModule } from "@angular/cdk/overlay";
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MatVideoModule } from 'mat-video';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +36,9 @@ import { SettingsComponent } from './settings/settings.component';
     NgbModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    OverlayModule
+    OverlayModule,
+    LeafletModule.forRoot(),
+    MatVideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

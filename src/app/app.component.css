@@ -1,7 +1,7 @@
 .form-control:focus,.form-control:active {
     outline: none !important;
     box-shadow: none;
-    background-color: rgb(148, 143, 138) !important;
+    background-color: rgb(170, 192, 224) !important;
  }
 
  .badge{
@@ -36,7 +36,7 @@ hr {
 .menu {
     width: 60px;
     height: 60px;
-    padding-top: 15px;
+    padding-top: 12px;
     margin: 0;
 }
 
@@ -44,7 +44,8 @@ hr {
     width: max-content;
     max-width: 250px;
     height: fit-content;
-    background-color: rgba(226, 145, 222, 0.4);
+    max-height: 500px;
+    background-color: rgba(141, 103, 139, 0.8);
     border-radius: 15px;
     padding: 5px 10px;
     color: white;
@@ -55,5 +56,6 @@ hr {
 }
 
 .active {
-    border-left: 3px solid yellowgreen !important;
+    border-left: 4px solid yellowgreen !important;
+    background-color: #a37d7d50 !important;
 }
