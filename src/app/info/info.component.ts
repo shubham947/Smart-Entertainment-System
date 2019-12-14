@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ticket } from '../model/Ticket';
 
 @Component({
   selector: 'app-info',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
+  ticket:Ticket;
+
   constructor() { }
 
   ngOnInit() {
+    this.ticket = JSON.parse(sessionStorage.getItem('ticket'));
   }
 
 }

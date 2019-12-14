@@ -18,6 +18,8 @@ import { MapComponent } from './map/map.component';
 import { InfoComponent } from './info/info.component';
 import { SettingsComponent } from './settings/settings.component';
 import { PlayerComponent } from './player/player.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,10 @@ import { PlayerComponent } from './player/player.component';
     MatSidenavModule,
     OverlayModule,
     LeafletModule.forRoot(),
-    MatVideoModule
+    MatVideoModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

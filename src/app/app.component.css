@@ -49,6 +49,7 @@ hr {
     border-radius: 15px;
     padding: 5px 10px;
     color: white;
+    scroll-behavior: auto;
 }
 
 .dialog a {

@@ -12,3 +12,7 @@ div fa-icon:hover {
     font-size: 1em;
     color: white;
 }
+
+.mediaDetails {
+    color: rgba(255, 255, 255, 0.7);
+}

@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'info', component: InfoComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'settings', component: SettingsComponent }
+  { path: 'settings', component: SettingsComponent },
+  { path: 'logout', redirectTo:'' }
 ];
 
 @NgModule({

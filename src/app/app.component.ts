@@ -52,4 +52,8 @@ export class AppComponent {
     this.playerOpen = $event;
   }
 
+  clearSession() {
+    sessionStorage.clear();
+  }
+  
 }

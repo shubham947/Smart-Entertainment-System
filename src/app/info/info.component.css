@@ -1,0 +1,12 @@
+.card {
+    min-height: 300px;
+}
+
+.pnr {
+    font-size: 1.5em;
+}
+
+hr {
+    border-color: white;
+    margin: 0;
+}

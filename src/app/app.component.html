@@ -71,7 +71,7 @@
         <div *ngIf="user" class="dialog text-center text-light" role="dialog" aria-label="User Menu">
           <small>Welcome {{user}}</small>
           <br><hr>
-          <a class="text-light" href="/logout">
+          <a class="text-light" href="/logout" (onclick)="clearSession()">
             <small><strong>Logout</strong></small>
           </a>
         </div>

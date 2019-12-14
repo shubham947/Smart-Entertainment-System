@@ -8,7 +8,7 @@ import { Ticket } from '../model/Ticket';
 })
 export class TicketService {
 
-  baseUrl = 'localhost:8080/api/ticket/';
+  baseUrl = 'http://funjourney.herokuapp.com/api/ticket/';
 
   constructor(private http: HttpClient) { }
 
