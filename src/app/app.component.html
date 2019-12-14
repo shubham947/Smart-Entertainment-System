@@ -10,7 +10,18 @@
             <fa-icon [icon]="faSearch"></fa-icon>
         </span>
       </div>
-      <input type="text" class="form-control bg-dark text-light" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+      <input type="text" (keyup)="onKey($event)"  cdkOverlayOrigin #searchDialog="cdkOverlayOrigin"
+       class="form-control bg-dark text-light" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+       <ng-template cdkConnectedOverlay
+                    [cdkConnectedOverlayOrigin]="searchDialog"
+                    [cdkConnectedOverlayOpen]="searchDialogOpen">
+        <div class="dialog" role="dialog" aria-label="Search Results">
+          <div *ngFor="let searchResult of searchResults">
+            <small>{{searchResult}}</small>
+            <br><hr>
+          </div>
+        </div>
+      </ng-template>
     </div>
   </form>
   <div class="ml-auto col-md-2 text-right h4 my-auto">
@@ -97,6 +108,7 @@
     </a>
   </mat-sidenav>
   <mat-sidenav-content>
+    <app-player *ngIf="playerOpen" (messageEvent)="closePlayer($event)"></app-player>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
