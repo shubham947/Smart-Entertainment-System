@@ -7,7 +7,13 @@
     <div class="px-auto">
         <video class="my-4 offset-md-2 col-md-8 p-0" src="http://localhost:3000/video/sample" controls></video>
     </div>
-    <div class="mediaDetails">
-        
+    <div class="mediaDetails" *ngIf="media">
+        <span>{{media.name}}</span>
+        <span class="px-4">|</span>
+        <span>{{media.duration/60}} Hour {{media.duration%60}} Minutes</span>
+        <span class="px-4">|</span>
+        <span>{{media.genre}}</span>
+        <span class="px-4">|</span>
+        <span>{{media.certification}}</span>
     </div>
 </div>

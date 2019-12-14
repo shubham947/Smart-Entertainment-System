@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Media } from '../model/Media';
+import { MediaService } from '../service/media.service';
 
 @Component({
   selector: 'app-video',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
-  constructor() { }
+  movies:Media[];
+
+  constructor(private mediaService:MediaService) { }
 
   ngOnInit() {
+    this.mediaService.filterByType('video').subscribe(
+      (res:Media[]) => {this.movies=res},
+      (err) => {}
+    )
   }
 
 }

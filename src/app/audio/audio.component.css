@@ -1,0 +1,11 @@
+.errMessage {
+    height: 100px;
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+hr {
+    border-top: 1px solid white;
+    margin: 4px 0;
+}

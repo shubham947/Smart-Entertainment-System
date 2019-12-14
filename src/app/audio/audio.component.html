@@ -1,4 +1,59 @@
-<audio controls>
-    <source src="C:/Users/Shubham Kumar/Downloads/DJ NYK - Bollywood Sunset Set at Lake Pichola (Udaipur)Electronyk Podcast Specials.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+<div class="container my-3">
+    <h3 class="h3 heading">Latest Songs</h3><hr>
+    <div class="row overflow-auto">
+        <div class="errMessage col-6 offset-3" *ngIf="!audios">
+            No songs available.
+        </div>
+        <div class="card mr-3 my-4" *ngFor="let movie of movies">
+            <img class="card-img-top" [src]="movie.photoUrl" alt="Card image cap">
+            <!-- <div class="card-body">
+                <p class="card-text">{{movie.name}}</p>
+                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+            </div> -->
+            <div class="card-footer">
+                <p class="card-text">{{movie.name}}</p>
+                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-3">
+    <h3 class="h3 heading">Podcasts</h3><hr>
+    <div class="row overflow-auto">
+        <div class="errMessage col-6 offset-3" *ngIf="!audios">
+            No Podcasts available.
+        </div>
+        <div class="card mr-3 my-4" *ngFor="let movie of movies">
+            <img class="card-img-top" [src]="movie.photoUrl" alt="Card image cap">
+            <!-- <div class="card-body">
+                <p class="card-text">{{movie.name}}</p>
+                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+            </div> -->
+            <div class="card-footer">
+                <p class="card-text">{{movie.name}}</p>
+                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-4">
+    <h3 class="h3 heading">Evergreen Songs</h3><hr>
+    <div class="row overflow-auto">
+        <div class="errMessage col-6 offset-3" *ngIf="!audios">
+            No songs available.
+        </div>
+        <div class="card mr-3 my-4" *ngFor="let movie of audios">
+            <img class="card-img-top" [src]="movie.photoUrl" alt="Card image cap">
+            <!-- <div class="card-body">
+                <p class="card-text">{{movie.name}}</p>
+                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+            </div> -->
+            <div class="card-footer">
+                <p class="card-text">{{movie.name}}</p>
+                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+            </div>
+        </div>
+    </div>
+</div>

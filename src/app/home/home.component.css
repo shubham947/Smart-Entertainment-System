@@ -3,3 +3,10 @@ hr {
     margin: 4px 0;
 }
 
+.card {
+    height: 200px;
+}
+
+.card:hover {
+    background-color: rgb(48, 60, 112) !important;
+}

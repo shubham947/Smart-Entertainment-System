@@ -1,1 +1,24 @@
-<p>home works</p>
+<div class="container my-3 text-light">
+    <div class="row display-4 text-center my-4">
+        <div class="col-lg-8 offset-lg-2">
+            Welcome to Smart Entertainment System
+        </div>
+    </div>
+    <div class="row py-4">
+        <div class="col-md-4">
+            <div [routerLink]="['/video']" class="card col-10 offset-1 bg-dark h1">
+                <div class="text-center my-auto">Watch Movies</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div [routerLink]="['/map']" class="card col-10 offset-1 bg-dark h1">
+                <div class="text-center my-auto">Map</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div [routerLink]="['/info']" class="card col-10 offset-1 bg-dark h1">
+                <div class="text-center my-auto">View Ticket</div>
+            </div>
+        </div>
+    </div>
+</div>

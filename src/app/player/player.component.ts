@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Media } from '../model/Media';
 
 @Component({
   selector: 'app-player',
@@ -9,9 +10,9 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 export class PlayerComponent {
 
   faTimes = faTimes;
+  media:Media;
 
   playerOpen:boolean;
-
   @Output() messageEvent = new EventEmitter<boolean>();
   
   closePlayer() {

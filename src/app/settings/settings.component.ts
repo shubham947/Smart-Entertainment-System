@@ -9,7 +9,7 @@ import { Ticket } from '../model/Ticket';
 export class SettingsComponent implements OnInit{
 
   ticket:Ticket;
-  childMode:boolean=false;
+  childMode:boolean;
 
   childModeToggle(){
     this.childMode = !this.childMode;
@@ -22,5 +22,6 @@ export class SettingsComponent implements OnInit{
 
   ngOnInit() {
     this.ticket = JSON.parse(sessionStorage.getItem('ticket'));
+    this.childMode = JSON.parse(sessionStorage.getItem('childMode'));
   }
 }

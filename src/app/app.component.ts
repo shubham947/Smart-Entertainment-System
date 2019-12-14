@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
   userDialogOpen:boolean = false;
   notificationDialogOpen:boolean = false;
   ticket:Ticket;
-  notifications:string[] = ['kbdshcbzsbsbb validateVerticalPosition hvbvvvvvy', 'gvdsgv a vsvb', 'gvgb'];
+  notifications:string[] = ['Login with your PNR for full features', 'Welcome to Smart Entertainment System'];
   numNotification = this.notifications.length;
   
   ngOnInit() {

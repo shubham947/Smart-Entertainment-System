@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  videoName:string = 'Captain.Marvel.2019.1080p.mp4';
-  nowPlaying:string='C:/Users/Shubham Kumar/Downloads/Movies/' + this.videoName;
+  
 
 }
