@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LocationService {
 
-  baseUrl = 'localhost:8080/api/loc/';
+  baseUrl = '/api/loc/';
   constructor(private http: HttpClient) { }
 
   public getNearestCity(lat: number, lng: number): Observable<Coordinates> {

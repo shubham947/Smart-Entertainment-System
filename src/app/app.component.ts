@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faSearch, faUserCircle, faCog, faBell, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faHome, faMapMarkedAlt, faInfo, faFilm } from "@fortawesome/free-solid-svg-icons";
 import { faItunesNote } from "@fortawesome/free-brands-svg-icons";
+import { Ticket } from './model/Ticket';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'SES';
   faSearch = faSearch;
   faUserCircle = faUserCircle;
@@ -16,8 +17,6 @@ export class AppComponent {
   faBell = faBell;
   faBars = faBars;
 
-  notifications:string[] = ['kbdshcbzsbsbb validateVerticalPosition hvbvvvvvy', 'gvdsgv a vsvb', 'gvgb'];
-  numNotification = this.notifications.length;
   menuOpened:boolean = true;
 
   faHome = faHome;
@@ -29,7 +28,13 @@ export class AppComponent {
   tab = '';
   userDialogOpen:boolean = false;
   notificationDialogOpen:boolean = false;
-  user:any = null;
+  ticket:Ticket;
+  notifications:string[] = ['kbdshcbzsbsbb validateVerticalPosition hvbvvvvvy', 'gvdsgv a vsvb', 'gvgb'];
+  numNotification = this.notifications.length;
+  
+  ngOnInit() {
+    this.ticket = JSON.parse(sessionStorage.getItem('ticket'));
+  }
 
   searchResults:string[] = [];
   searchDialogOpen:boolean = false;
@@ -55,5 +60,5 @@ export class AppComponent {
   clearSession() {
     sessionStorage.clear();
   }
-  
+
 }

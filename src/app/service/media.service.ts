@@ -8,7 +8,7 @@ import { Media } from '../model/Media';
 })
 export class MediaService {
 
-  baseUrl = 'localhost:8080/api/media/';
+  baseUrl = '/api/media/';
   constructor(private http: HttpClient) { }
 
   public filterByGenre(genre: string): Observable<Media[]> {

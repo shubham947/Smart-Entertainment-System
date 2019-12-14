@@ -61,15 +61,15 @@
       <ng-template cdkConnectedOverlay
       [cdkConnectedOverlayOrigin]="userDialog"
       [cdkConnectedOverlayOpen]="userDialogOpen">
-        <div *ngIf="!user" class="dialog text-center text-light" role="dialog" aria-label="User Menu">
+        <div *ngIf="!ticket" class="dialog text-center text-light" role="dialog" aria-label="User Menu">
           <small>Anonymous</small>
           <br><hr>
           <a class="text-light" [routerLink]="['/login']" (click)="tab=''">
             <small><strong>Login</strong></small>
           </a>
         </div>
-        <div *ngIf="user" class="dialog text-center text-light" role="dialog" aria-label="User Menu">
-          <small>Welcome {{user}}</small>
+        <div *ngIf="ticket" class="dialog text-center text-light" role="dialog" aria-label="User Menu">
+          <small>Welcome {{ticket.guest.name}}</small>
           <br><hr>
           <a class="text-light" href="/logout" (onclick)="clearSession()">
             <small><strong>Logout</strong></small>
