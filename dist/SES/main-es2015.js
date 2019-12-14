@@ -2761,7 +2761,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container my-3\">\n    <h4 class=\"h4 d-flex\">\n        <div>Now Playing</div>\n        <div class=\"ml-auto\" (click)=\"closePlayer()\"><fa-icon [icon]=\"faTimes\"></fa-icon></div>\n    </h4>\n    <hr>\n    <div class=\"px-auto\">\n        <video class=\"my-4 offset-md-2 col-md-8 p-0\" src=\"http://localhost:3000/video/sample\" controls></video>\n    </div>\n    <div class=\"mediaDetails\" *ngIf=\"media\">\n        <span>{{media.name}}</span>\n        <span class=\"px-4\">|</span>\n        <span>{{media.duration/60}} Hour {{media.duration%60}} Minutes</span>\n        <span class=\"px-4\">|</span>\n        <span>{{media.genre}}</span>\n        <span class=\"px-4\">|</span>\n        <span>{{media.certification}}</span>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container my-3\">\n    <h4 class=\"h4 d-flex\">\n        <div>Now Playing</div>\n        <div class=\"ml-auto\" (click)=\"closePlayer()\"><fa-icon [icon]=\"faTimes\"></fa-icon></div>\n    </h4>\n    <hr>\n    <div class=\"px-auto\">\n        <video class=\"my-4 offset-md-2 col-md-8 p-0\" src=\"http://192.168.43.227:3000/video/sample\" controls></video>\n    </div>\n    <div class=\"mediaDetails\" *ngIf=\"media\">\n        <span>{{media.name}}</span>\n        <span class=\"px-4\">|</span>\n        <span>{{media.duration/60}} Hour {{media.duration%60}} Minutes</span>\n        <span class=\"px-4\">|</span>\n        <span>{{media.genre}}</span>\n        <span class=\"px-4\">|</span>\n        <span>{{media.certification}}</span>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -3634,13 +3634,13 @@ __webpack_require__.r(__webpack_exports__);
 let MediaService = class MediaService {
     constructor(http) {
         this.http = http;
-        this.baseUrl = '/api/media/';
+        this.baseUrl = 'api/media';
     }
     filterByGenre(genre) {
-        return this.http.get(`genre/${this.baseUrl}/${genre}`);
+        return this.http.get(`${this.baseUrl}/genre/${genre}`);
     }
     filterByType(type) {
-        return this.http.get(`type/${this.baseUrl}/${type}`);
+        return this.http.get(`${this.baseUrl}/type/${type}`);
     }
     findMediaByName(name) {
         return this.http.get(`name/${name}`);

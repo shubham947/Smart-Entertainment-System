@@ -8,15 +8,15 @@ import { Media } from '../model/Media';
 })
 export class MediaService {
 
-  baseUrl = '/api/media/';
+  baseUrl = 'api/media';
   constructor(private http: HttpClient) { }
 
   public filterByGenre(genre: string): Observable<Media[]> {
-    return this.http.get<Media[]>(`genre/${this.baseUrl}/${genre}`);
+    return this.http.get<Media[]>(`${this.baseUrl}/genre/${genre}`);
   }
 
   public filterByType(type: string): Observable<Media[]> {
-    return this.http.get<Media[]>(`type/${this.baseUrl}/${type}`);
+    return this.http.get<Media[]>(`${this.baseUrl}/type/${type}`);
   }
 
   public findMediaByName(name: string): Observable<Media> {
