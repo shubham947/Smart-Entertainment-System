@@ -18,8 +18,8 @@
             <div class="mt-2">
                 <h2 class="h2">{{ticket.guest.name}}</h2>
                 <p>Gender: {{ticket.guest.gender}}</p>
-                <p>Source: {{ticket.from}}</p>
-                <p>Destination: {{ticket.to}}</p>
+                <p>Source: {{ticket.from.name}}</p>
+                <p>Destination: {{ticket.to.name}}</p>
                 <p>Boarding Time: {{ticket.departure | date:'shortTime'}}</p>
                 <p>Arrival Time: {{ticket.arrival | date:'shortTime'}}</p>
             </div>

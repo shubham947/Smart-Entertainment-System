@@ -15,8 +15,8 @@ export class MediaService {
     return this.http.get<Media[]>(`${this.baseUrl}/genre/${genre}`);
   }
 
-  public filterByType(type: string): Observable<Media[]> {
-    return this.http.get<Media[]>(`${this.baseUrl}/type/${type}`);
+  public filterByType(type: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/type/${type}`);
   }
 
   public findMediaByName(name: string): Observable<Media> {

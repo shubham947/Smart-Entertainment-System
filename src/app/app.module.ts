@@ -5,7 +5,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { MatSidenavModule } from "@angular/material";
 import { OverlayModule } from "@angular/cdk/overlay";
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import { MatVideoModule } from 'mat-video';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +42,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     OverlayModule,
     LeafletModule.forRoot(),
-    MatVideoModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

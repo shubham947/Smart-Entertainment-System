@@ -12,7 +12,7 @@
             </div> -->
             <div class="card-footer">
                 <p class="card-text">{{movie.name}}</p>
-                <p class="card-text">{{movie.duration/60}} Hour {{movie.duration%60}} Minutes</p>
+                <p class="card-text">{{movie.duration/60 | number : '1.0-0'}} Hour {{movie.duration%60}} Minutes</p>
             </div>
         </div>
     </div>

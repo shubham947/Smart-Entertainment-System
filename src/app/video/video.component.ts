@@ -15,7 +15,8 @@ export class VideoComponent implements OnInit {
 
   ngOnInit() {
     this.mediaService.filterByType('video').subscribe(
-      (res:Media[]) => {this.movies=res},
+      (res:any) => {
+        this.movies=res},
       (err) => {}
     )
   }

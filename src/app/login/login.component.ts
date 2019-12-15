@@ -3,6 +3,7 @@ import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 import { Ticket } from '../model/Ticket';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { TicketService } from '../service/ticket.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,13 @@ export class LoginComponent implements OnInit {
 
   largeScreen:boolean;
   ticket: Ticket;
-  
+
   loginForm: FormGroup;
 
-  constructor(private ticketService: TicketService) { }
+  constructor(private ticketService: TicketService, private router: Router) { }
 
   ngOnInit() {
-    if (window.innerWidth >= 992) { 
+    if (window.innerWidth >= 992) {
       this.largeScreen = true;
     }
     else {
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
       (res: Ticket) => {
         sessionStorage.setItem('ticket', JSON.stringify(res));
         this.ticket = res;
+        this.router.navigate(['/']);
     }, err => {
 
     });
